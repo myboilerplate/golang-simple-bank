@@ -8,7 +8,7 @@ SELECT * FROM entries WHERE id = $1 LIMIT 1;
 SELECT * FROM entries LIMIT $1 OFFSET $2;
 
 -- name: UpdateEntry :exec
-UPDATE entries SET account_id = $2, amount = $3 WHERE id = $1;
+UPDATE entries SET account_id = $2, amount = $3 WHERE id = $1 RETURNING *;
 
 -- name: DeleteEntry :exec
 DELETE FROM entries WHERE id = $1;
