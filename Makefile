@@ -13,5 +13,8 @@ sqlc:
 cleanup:
 	go mod tidy
 
+server:
+	go run main.go
+
 test:
 	go test -v -cover -short ./...
