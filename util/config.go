@@ -5,9 +5,9 @@ import "github.com/spf13/viper"
 // Config is the application config
 // Read by ENV variables
 type Config struct {
-	dbDriver      string `mapstructure:"DB_DRIVER"`
-	dbSource      string `mapstructure:"DB_SOURCE"`
-	serverAddress string `mapstructure:"SERVER_ADDRESS"`
+	DBDriver      string `mapstructure:"DB_DRIVER"`
+	DBSource      string `mapstructure:"DB_SOURCE"`
+	ServerAddress string `mapstructure:"SERVER_ADDRESS"`
 }
 
 func LoadConfig(path string) (config Config, err error) {
